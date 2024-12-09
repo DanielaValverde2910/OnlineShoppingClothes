@@ -1,0 +1,71 @@
+﻿@{
+    var usuarioNombre = ViewData["UsuarioNombre"] as string;
+}
+
+<div class="container mt-4">
+    <!-- Encabezado con bienvenida -->
+    <div class="text-center mb-4">
+        <h1 class="display-4">👗 Bienvenido, @usuarioNombre 👕</h1>
+        <p class="lead">¡Explora nuestra tienda de ropa en línea y encuentra tus estilos favoritos! 🌸✨</p>
+    </div>
+
+    <!-- Botón para cerrar sesión -->
+    <form asp-action="Logout" asp-controller="Usuario" method="post" class="d-inline">
+        <button type="submit" class="btn btn-outline-danger float-end">Cerrar Sesión</button>
+    </form>
+
+    <!-- Acciones principales -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <a href="@Url.Action("Index", "Carrito")" class="btn btn-success me-2">🛒 Ver Carrito</a>
+            <a href="@Url.Action("Create", "Productos")" class="btn btn-primary">➕ Agregar Producto</a>
+        </div>
+        <div>
+            <a href="@Url.Action("Login", "Usuario")" class="btn btn-outline-primary me-2">Iniciar Sesión</a>
+            <a href="@Url.Action("Registro", "Usuario")" class="btn btn-outline-secondary">Registrarse</a>
+            <a href="@Url.Action("Perfil", "Usuario")" class="btn btn-primary">Ver Perfil</a>
+        </div>
+    </div>
+
+    <!-- Sección de productos -->
+    <h2 class="mb-4">✨ Productos Disponibles ✨</h2>
+    <div class="row">
+        @foreach (var producto in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">@producto.Nombre</h5>
+                        <p class="card-text text-muted">@producto.Descripcion</p>
+                        <p class="fw-bold text-success">$@producto.Precio</p>
+                        <p class="text-secondary"><small>📦 Stock: @producto.Stock | Categoría: @producto.Categoria</small></p>
+
+                        <div class="d-flex justify-content-between">
+                            <!-- Botón eliminar -->
+                            <form asp-action="Delete" asp-controller="Productos" asp-route-id="@producto.Id" method="post" class="d-inline">
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que quieres eliminar este producto?')">
+                                    Eliminar
+                                </button>
+                            </form>
+
+
+                            <!-- Agregar al carrito -->
+                            <form asp-action="Agregar" asp-controller="Carrito" method="post" class="d-inline">
+                                <input type="hidden" name="productoId" value="@producto.Id" />
+                                <input type="number" name="cantidad" value="1" min="1" max="@producto.Stock" class="form-control form-control-sm d-inline-block w-auto" />
+                                <button class="btn btn-primary btn-sm">🛒Añadir🛒</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+    <!-- Sección de promociones -->
+    <h2 class="mb-4">🎉 Promociones Destacadas 🎉</h2>
+    <div class="alert alert-info text-center" role="alert">
+        Próximamente más ofertas especiales para ti. ¡Mantente atento! 💖
+    </div>
+</div>

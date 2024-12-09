@@ -1,0 +1,24 @@
+﻿<h2 class="text-center my-4">Iniciar Sesión</h2>
+
+<form asp-action="Login" method="post" class="mx-auto" style="max-width: 400px;">
+    <!-- Campo para el correo electrónico -->
+    <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input id="email" name="email" type="email" class="form-control" required />
+    </div>
+
+    <!-- Campo para la contraseña -->
+    <div class="mb-3">
+        <label for="password" class="form-label">Contraseña:</label>
+        <input id="password" name="password" type="password" class="form-control" required />
+    </div>
+
+    <!-- Botón de envío -->
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary btn-lg w-100">Iniciar Sesión</button>
+    </div>
+    <!-- Botones de acción -->
+    <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-primary btn-lg">🏠 Volver al Inicio</a>
+    </div>
+</form>

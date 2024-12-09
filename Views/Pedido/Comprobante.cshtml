@@ -1,0 +1,25 @@
+﻿@model OnlineShoppingClothes.Models.Pedido
+
+<div class="container mt-5">
+    <!-- Encabezado -->
+    <h1 class="text-center text-success mb-4">🎉 ¡Compra Exitosa! 🎉</h1>
+
+    <p class="text-center">Gracias por tu compra. Tu pedido ha sido confirmado y está siendo procesado.</p>
+
+    <!-- Información del pedido -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h5 class="card-title text-success">Detalles del Pedido</h5>
+            <ul class="list-unstyled">
+                <li><strong>ID de Pedido:</strong> @Model.Id</li>
+                <li><strong>Total:</strong> $@Model.PrecioTotal</li>
+                <li><strong>Estado:</strong> @Model.Estado</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Botones de acción -->
+    <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-primary btn-lg">🏠 Volver al Inicio</a>
+    </div>
+</div>

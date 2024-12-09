@@ -1,0 +1,47 @@
+﻿@model OnlineShoppingClothes.Models.Pedido
+
+<div class="container mt-5">
+    <!-- Encabezado -->
+    <h1 class="text-center mb-4">🛍️ Detalle de la Compra 🛍️</h1>
+
+    <!-- Tabla de productos -->
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Productos)
+            {
+                <tr>
+                    <td>@item.Producto.Nombre</td>
+                    <td>$@item.Producto.Precio</td>
+                    <td>@item.Cantidad</td>
+                    <td>$@(item.Producto.Precio * item.Cantidad)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- Total de la compra -->
+    <div class="text-right mb-4">
+        <p><strong>Total:</strong> $@Model.PrecioTotal</p>
+    </div>
+
+    <!-- Botón para confirmar compra -->
+    <div class="d-flex justify-content-end">
+        <form asp-action="Confirmar" asp-controller="Pedido" method="post">
+            <button class="btn btn-success btn-lg">
+                Confirmar Compra
+            </button>
+        </form>
+    </div>
+    <!-- Botones de acción -->
+    <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="@Url.Action("Index", "Carrito")" class="btn btn-primary btn-lg">🛒 Volver al Carrito</a>
+    </div>
+</div>

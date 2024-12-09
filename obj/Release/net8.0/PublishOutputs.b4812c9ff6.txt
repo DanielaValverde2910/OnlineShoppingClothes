@@ -1,0 +1,7 @@
+C:\Users\Daniela Valverde\OneDrive - Universidad Estatal a Distancia\Documentos\PROGRAMACION AVANZADA EN WEB\OnlineShoppingClothes\obj\Release\net8.0\PubTmp\Out\OnlineShoppingClothes.exe
+C:\Users\Daniela Valverde\OneDrive - Universidad Estatal a Distancia\Documentos\PROGRAMACION AVANZADA EN WEB\OnlineShoppingClothes\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Users\Daniela Valverde\OneDrive - Universidad Estatal a Distancia\Documentos\PROGRAMACION AVANZADA EN WEB\OnlineShoppingClothes\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\Daniela Valverde\OneDrive - Universidad Estatal a Distancia\Documentos\PROGRAMACION AVANZADA EN WEB\OnlineShoppingClothes\obj\Release\net8.0\PubTmp\Out\OnlineShoppingClothes.dll
+C:\Users\Daniela Valverde\OneDrive - Universidad Estatal a Distancia\Documentos\PROGRAMACION AVANZADA EN WEB\OnlineShoppingClothes\obj\Release\net8.0\PubTmp\Out\OnlineShoppingClothes.deps.json
+C:\Users\Daniela Valverde\OneDrive - Universidad Estatal a Distancia\Documentos\PROGRAMACION AVANZADA EN WEB\OnlineShoppingClothes\obj\Release\net8.0\PubTmp\Out\OnlineShoppingClothes.runtimeconfig.json
+C:\Users\Daniela Valverde\OneDrive - Universidad Estatal a Distancia\Documentos\PROGRAMACION AVANZADA EN WEB\OnlineShoppingClothes\obj\Release\net8.0\PubTmp\Out\OnlineShoppingClothes.pdb

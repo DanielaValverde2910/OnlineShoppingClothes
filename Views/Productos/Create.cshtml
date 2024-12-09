@@ -1,0 +1,44 @@
+﻿@model OnlineShoppingClothes.Models.Producto
+
+<div class="container mt-5">
+    <!-- Encabezado -->
+    <h1 class="text-center mb-4">➕ Agregar Nuevo Producto ➕</h1>
+
+    <!-- Formulario para agregar producto -->
+    <form asp-action="Create" method="post">
+        <div class="form-group">
+            <label for="Nombre" class="font-weight-bold">Nombre del Producto:</label>
+            <input type="text" id="Nombre" name="Nombre" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label for="Descripcion" class="font-weight-bold">Descripción:</label>
+            <textarea id="Descripcion" name="Descripcion" class="form-control" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="Precio" class="font-weight-bold">Precio ($):</label>
+            <input type="number" id="Precio" name="Precio" class="form-control" step="0.01" required />
+        </div>
+
+        <div class="form-group">
+            <label for="Categoria" class="font-weight-bold">Categoría:</label>
+            <input type="text" id="Categoria" name="Categoria" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label for="Stock" class="font-weight-bold">Stock:</label>
+            <input type="number" id="Stock" name="Stock" class="form-control" required />
+        </div>
+
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-success btn-lg">
+                Guardar Producto
+            </button>
+        </div>
+        <!-- Botones de acción -->
+        <div class="d-flex justify-content-center gap-3 mt-4">
+            <a href="@Url.Action("Index", "Home")" class="btn btn-primary btn-lg">🏠 Volver al Inicio</a>
+        </div>
+    </form>
+</div>

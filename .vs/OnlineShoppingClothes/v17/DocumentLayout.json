@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Daniela Valverde\\OneDrive - Universidad Estatal a Distancia\\Documentos\\PROGRAMACION AVANZADA EN WEB\\OnlineShoppingClothes\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{17F39E9D-89BB-44B2-80EE-1BAE92CDDB74}|OnlineShoppingClothes.csproj|c:\\users\\daniela valverde\\onedrive - universidad estatal a distancia\\documentos\\programacion avanzada en web\\onlineshoppingclothes\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{17F39E9D-89BB-44B2-80EE-1BAE92CDDB74}|OnlineShoppingClothes.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17F39E9D-89BB-44B2-80EE-1BAE92CDDB74}|OnlineShoppingClothes.csproj|c:\\users\\daniela valverde\\onedrive - universidad estatal a distancia\\documentos\\programacion avanzada en web\\onlineshoppingclothes\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17F39E9D-89BB-44B2-80EE-1BAE92CDDB74}|OnlineShoppingClothes.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17F39E9D-89BB-44B2-80EE-1BAE92CDDB74}|OnlineShoppingClothes.csproj|c:\\users\\daniela valverde\\onedrive - universidad estatal a distancia\\documentos\\programacion avanzada en web\\onlineshoppingclothes\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17F39E9D-89BB-44B2-80EE-1BAE92CDDB74}|OnlineShoppingClothes.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Daniela Valverde\\OneDrive - Universidad Estatal a Distancia\\Documentos\\PROGRAMACION AVANZADA EN WEB\\OnlineShoppingClothes\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Daniela Valverde\\OneDrive - Universidad Estatal a Distancia\\Documentos\\PROGRAMACION AVANZADA EN WEB\\OnlineShoppingClothes\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADcAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-09T04:33:28.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Daniela Valverde\\OneDrive - Universidad Estatal a Distancia\\Documentos\\PROGRAMACION AVANZADA EN WEB\\OnlineShoppingClothes\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Daniela Valverde\\OneDrive - Universidad Estatal a Distancia\\Documentos\\PROGRAMACION AVANZADA EN WEB\\OnlineShoppingClothes\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T04:31:22.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\Daniela Valverde\\OneDrive - Universidad Estatal a Distancia\\Documentos\\PROGRAMACION AVANZADA EN WEB\\OnlineShoppingClothes\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\Daniela Valverde\\OneDrive - Universidad Estatal a Distancia\\Documentos\\PROGRAMACION AVANZADA EN WEB\\OnlineShoppingClothes\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAqwE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T04:30:41.603Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

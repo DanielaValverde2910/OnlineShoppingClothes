@@ -1,0 +1,89 @@
+﻿@model List<OnlineShoppingClothes.Models.ProductoPedido>
+
+<div class="container mt-5">
+    <!-- Encabezado -->
+    <h1 class="text-center mb-4">🛒 Carrito de Compras</h1>
+
+    @if (!Model.Any())
+    {
+        <!-- Mensaje cuando el carrito está vacío -->
+        <div class="alert alert-info text-center" role="alert">
+            ¡Tu carrito está vacío! 🛍️ <br>
+            <a href="/Productos" class="alert-link">Explora nuestros productos</a> y agrega lo que más te guste.
+        </div>
+    }
+    else
+    {
+        <!-- Tabla de productos en el carrito -->
+        <table class="table table-bordered table-hover shadow-sm">
+            <thead class="bg-dark text-light">
+                <tr class="text-center">
+                    <th>Producto</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Producto.Nombre</td>
+                        <td>@item.Producto.Descripcion</td>
+                        <td class="text-center">$@item.Producto.Precio</td>
+                        <td class="text-center">@item.Cantidad</td>
+                        <td class="text-center">$@(item.Producto.Precio * item.Cantidad)</td>
+                        <td class="text-center">
+                            <div class="d-flex justify-content-center gap-2">
+                                <!-- Botón para eliminar producto -->
+                                <form asp-action="Eliminar" asp-controller="Carrito" method="post" class="d-inline">
+                                    <input type="hidden" name="productoId" value="@item.ProductoId" />
+                                    <button class="btn btn-danger btn-sm" title="Eliminar">
+                                        <i class="bi bi-trash"></i> Eliminar
+                                    </button>
+                                </form>
+
+                                <!-- Botón para actualizar cantidad -->
+                                <form asp-action="ActualizarCantidad" asp-controller="Carrito" method="post" class="d-inline">
+                                    <input type="hidden" name="productoId" value="@item.ProductoId" />
+                                    <input type="number" name="nuevaCantidad" value="@item.Cantidad" min="1"
+                                           class="form-control form-control-sm d-inline w-50 text-center" />
+                                    <button class="btn btn-primary btn-sm" title="Actualizar cantidad">
+                                        <i class="bi bi-pencil-square"></i> Actualizar
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <!-- Total y botones de acción -->
+        <div class="mt-4 text-end">
+            <p class="h5"><strong>Total:</strong> $@Model.Sum(item => item.Producto.Precio * item.Cantidad)</p>
+
+            <div class="d-flex justify-content-end gap-3 mt-3">
+                <!-- Botón de Pagar -->
+                <form asp-action="Pagar" asp-controller="Carrito" method="get">
+                    <button class="btn btn-success btn-lg">
+                        <i class="bi bi-credit-card"></i> Pagar
+                    </button>
+                </form>
+
+                <!-- Botón para vaciar el carrito -->
+                <form asp-action="Vaciar" asp-controller="Carrito" method="post">
+                    <button class="btn btn-warning btn-lg">
+                        <i class="bi bi-cart-x"></i> Vaciar Carrito
+                    </button>
+                </form>
+            </div>
+            <!-- Botones de acción -->
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <a href="@Url.Action("Index", "Home")" class="btn btn-primary btn-lg">🏠 Volver al Inicio</a>
+            </div>
+        </div>
+    }
+</div>
